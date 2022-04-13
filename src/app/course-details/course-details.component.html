@@ -1,0 +1,106 @@
+<div *ngFor="let course of courses">
+    <div *ngIf="course.id == courseId">
+        <div class="course">
+            <div class="row">
+                <div class="col-sm-5">
+                    <h1 class="title">Certified online training</h1>
+                    <h1 class="heading">{{course.title}}</h1>
+                    <mat-chip-list>
+                        <mat-chip>LEARNER'S CHOICE</mat-chip>
+                        <mat-chip color="accent" selected>BEST SELLER</mat-chip>
+                        <mat-chip color="primary" selected>HOT SKILL 2022</mat-chip>
+                    </mat-chip-list>
+                    <div class="icon">
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                        <mat-icon>star_border</mat-icon>
+                    </div>
+                    <div class="details">
+                        <div class="detailIcon">
+                            <mat-icon>access_alarm</mat-icon>{{course.duration}} <i> duration</i>
+                        </div>
+                        <div class="detailIcon">
+                            <mat-icon>equalizer</mat-icon>{{course.level}} <i>level</i>
+                        </div>
+                        <div class="detailIcon">
+                            <mat-icon>assignment</mat-icon> {{course.lessons}} <i>lessons</i>
+                        </div>
+                        <div class="detailIcon">
+                            <mat-icon>language</mat-icon>{{course.language}} <i>language</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-7">
+                    <img src="../../assets/signup.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="description">
+            <div class="row">
+                <div class="col-sm-5">
+                    <h1>
+                        Why learn {{course.title}}?
+                    </h1>
+                    <p>{{course.description}}</p>
+                </div>
+                <div class="col-sm-7">
+                    <img src="../../assets/signup.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="certificate">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="../../assets/certificate.jpg" alt="" height="300px">
+                </div>
+                <div class="col-sm-6 certi">
+                    <h1>
+                        Industry recognized certificate
+                    </h1>
+                    <p>100,000+ companies use Internshala for hiring every year. So a certificate from Internshala is
+                        recognized everywhere.</p>
+                </div>
+            </div>
+        </div>
+        <div class="syllabus">
+            <div class="row">
+                <div class="offset-sm-2 col-sm-8">
+                    <h1>Course Syllabus</h1>
+                    <div class="accordion">
+                        <mat-accordion class="accordion" *ngFor="let syllabus of course.syllabus">
+                            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                                <mat-expansion-panel-header>
+                                    <mat-panel-title>
+                                        {{syllabus.topics}}
+                                    </mat-panel-title>
+                                </mat-expansion-panel-header>
+                                <div *ngFor="let topics of syllabus.sub_topics">
+                                    <p>
+                                        <li>{{topics.sub_topic}}</li>
+                                    </p>
+                                </div>
+                            </mat-expansion-panel>
+                        </mat-accordion>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial container">
+            <div class="row">
+                <h1>Testimonial</h1>
+                <div class="col-sm-3 testiCards" *ngFor="let testimonial of course.testimonial">
+                    <figure class="snip1533">
+                        <figcaption>
+                            <blockquote>
+                                <p>{{testimonial.quote}}</p>
+                            </blockquote>
+                            <h3>{{testimonial.name}}</h3>
+                            <h4>{{testimonial.desination}}</h4>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>

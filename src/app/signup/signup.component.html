@@ -1,0 +1,73 @@
+<div class="row background">
+    <div class="col-sm-6 background-left p-5 pb-5">
+        <h1>Don't think! Just do It!</h1>
+        <img src="../../assets/signup.png" alt="">
+    </div>
+
+    <div class="container col-sm-6 background-right p-5 pb-5">
+        <form [formGroup]="regForm" (ngSubmit)="onsubmit()" class="example-form">
+            <div class="form-group">
+                <table class="example-full-width" cellspacing="0">
+                    <tr>
+                        <td>
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label>First name</mat-label>
+                                <input matInput [formControl]="fname">
+                            </mat-form-field>
+                        </td>
+                        <td>
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label>Last name</mat-label>
+                                <input matInput [formControl]="lname">
+                            </mat-form-field>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class=" form-group">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput [formControl]="email" placeholder="Ex. pat@example.com">
+                    <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
+                        Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="email.hasError('required')">
+                        Email is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class=" form-group">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input matInput [formControl]="pass" [type]="hide ? 'password' : 'text'">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                        <mat-icon class="mat-icon">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                    <mat-error *ngIf="pass.hasError('required')">
+                        Password is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <label>Gender</label><br>
+                <mat-radio-group [formControl]="gender">
+                    <mat-radio-button value="male">Male</mat-radio-button>
+                    <mat-radio-button value="female">Female</mat-radio-button>
+                    <mat-radio-button value="other">Others</mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <div class="form-group">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Mobile Number</mat-label>
+                    <span matPrefix>+91 &nbsp;</span>
+                    <input [formControl]="number" maxlength="10" matInput>
+                    <mat-error *ngIf="number.hasError('required')">
+                        Password is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+            </div>
+            <button class="example-full-width" type="submit" mat-flat-button color="primary">Signup</button>
+        </form>
+    </div>
+</div>

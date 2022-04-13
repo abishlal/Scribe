@@ -1,0 +1,148 @@
+.course{
+    background-color: aqua;
+    padding: 30px;
+    margin: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title{
+    font-size: 25px;
+    background-color: yellow;
+    min-width: 50%;
+    border-radius: 10px;
+    padding: 10px;
+}
+.heading{
+    font-size: 35px;
+    padding: 10px;
+    font-weight: 600;
+}
+.icon{
+    padding: 10px;
+}
+.details{
+    font-size: 15px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    min-width: 50%;
+}
+.detailIcon{
+    padding: 8px;
+}
+mat-icon{
+    padding-right:30px;
+}
+.description p {
+    font-size: 15px;
+}
+.description{
+    padding: 30px;
+    margin: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.description h1{
+    font-size: 25px;
+    font-weight: 600;
+}
+.description p{
+    font-size: 15px;
+}
+.certificate{
+    padding: 30px;
+    margin: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.certificate h1{
+    font-size: 25px;
+    font-weight: 600;
+}
+.certi{
+    padding-top: 10px;
+}
+.syllabus h1{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+}
+mat-panel-title{
+    font-size: 20px;
+}
+.syllabus p{
+    font-size: 16px;
+}
+.accordion{
+    margin-top: 30px;
+}
+
+/* testimonial*/
+.testimonial h1{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 30px;
+
+}
+.testiCards{
+    margin-left: auto;
+    margin-right: auto;
+}
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+.snip1533 {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  color: #9e9e9e;
+  font-size: 16px;
+  margin: 35px 10px 10px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border-top: 5px solid #d2652d;
+}
+
+
+.snip1533 figcaption {
+  padding: 13% 10% 12%;
+}
+
+.snip1533 figcaption:before {
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  color: #3f95f0;
+  content: "\f10e";
+  font-family: 'FontAwesome';
+  font-size: 32px;
+  left: 50%;
+  line-height: 60px;
+  position: absolute;
+  top: -30px;
+  width: 60px;
+}
+
+.snip1533 h3 {
+  color: #3c3c3c;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 10px 0 5px;
+}
+
+.snip1533 h4 {
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.8;
+}
+
+.snip1533 blockquote {
+  font-style: italic;
+  font-weight: 400;
+  margin: 0 0 20px;
+}

@@ -1,0 +1,67 @@
+<div class="row background">
+    <div class="col-sm-6 background-left p-5 pb-5">
+        <h1>Don't think! Just do It!</h1>
+        <img src="../../assets/signup.png" alt="">
+    </div>
+    
+    <div class="container col-sm-6 background-right p-5 pb-5">
+        <form [formGroup]="regForm" (ngSubmit)="onsubmit()">
+            <h1>Signup Form</h1>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Email is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+            <div class="form-group">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+                    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                        Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                        Email is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+                <label for="first_name">First name</label>
+                <input type="text" name="name" formControlName="name" class="form-control">
+                <div class="alert alert-danger "
+                    *ngIf="regForm.controls['fname'].invalid && regForm.controls['fname'].touched ">
+                    This field is required
+                </div>
+            </div>
+            <div class=" form-group card ">
+                <label for="last_name ">Last name</label>
+                <input type="text " formControlName="lname" class="form-control ">
+            </div>
+            <div class=" form-group card">
+                <label for="email ">Email</label>
+                <input type="email " formControlName="email" class="form-control ">
+                <div class="alert alert-danger "
+                    *ngIf="regForm.controls['email'].invalid && regForm.controls['email'].touched ">
+                    valid email is required
+                </div>
+            </div>
+            <div class=" form-group card">
+                <label for="Password ">Password</label>
+                <input type="password" formControlName="pass" class="form-control ">
+                <div class="alert alert-danger "
+                    *ngIf="regForm.controls['pass'].invalid && regForm.controls['pass'].touched ">
+                    password should be 8 charcters
+                </div>
+            </div>
+            <div class=" form-group card">
+                <label for="Confirm password ">Confirm Password</label>
+                <input type="password" class="form-control ">
+            </div>
+            <div class="form-group ">
+                <button class="btn btn-warning btn-block ">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

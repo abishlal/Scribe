@@ -1,0 +1,49 @@
+
+.background-left {
+    background-color: #bad1f8;
+    background-image: url('/assets/Sign-Up-BG-Image.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: contain;
+    padding-top: 30px;
+}
+
+.background-right {
+    background-color: #bad1f8;
+}
+
+h1 {
+    color: white;
+}
+img{
+    width: 100%;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  mat-label{
+      color: black;
+      font-size: 18px;
+  }
+  mat-form-field{
+      padding: 5px;
+  }
+  span{
+    color: black;
+    font-size: 18px;
+  }
+label{
+    font-size: 20px;
+    padding: 8px;
+}
+mat-radio-button{
+    padding: 8px;
+}
+ 
+  
